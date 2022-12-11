@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game đoán số</title>
+  </head>
+  <body>
+    <button onclick="play()">Play</button>
+    <script>
+      function play() {
+        let game = +prompt("Nhập vào khoản mà bạn đoán!");
+        let x = Math.floor(Math.random() * game);
+        let input;
+        let count = 1;
+        do {
+          let input = +prompt(
+            "Nhập vào số bạn đoán trong khoản vừa nhập, chỉ 3 lần sai thôi nha!"
+          );
+          while (input < x) {
+            count += 1;
+            input = +prompt("Số lớn hơn đi, lượt đoán sai " + count);
+            while (count >= 3) {
+              alert("Bạn đã hết lượt đoán, số đó là " + x);
+            }
+          }
+          while (input > x) {
+            count += 1;
+            input = +prompt("Số nhỏ hơn đi, lượt đoán sai " + count);
+            while (count >= 3) {
+              alert("Bạn đã hết lượt đoán, số đó là " + x);
+            }
+          }
+        } while (input == x || count == 3);
+        alert("Chúc mừng bạn đã đoán đúng, số đó là " + x);
+      }
+    </script>
+  </body>
+</html>
