@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sử dụng cấu trúc while</title>
+  </head>
+  <body>
+    <script>
+      //Bài 1
+      let num = +prompt("Xin số!");
+      let total = 0;
+      while (num != -1) {
+        num = +prompt("Xin số nữa!");
+        alert(num);
+        total += num;
+      }
+      alert(total);
+
+      //Bài 2
+      let w = 1;
+      while (w <= 100) {
+        document.write("<hr width = " + w + ">");
+        w++;
+      }
+    </script>
+  </body>
+</html>
