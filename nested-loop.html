@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sử dụng vòng lặp lồng nhau</title>
+  </head>
+  <body>
+    <script>
+      //Dùng for do
+      document.write("<h1>Dùng for do</h1>");
+      let draw =
+        "<table  border='1' width='300' cellspacing ='0' cellpadding = '3'>";
+      for (i = 1; i <= 10; i++) {
+        draw += "<tr>";
+        for (j = 1; j <= 10; j++) {
+          draw += "<td>" + i * j + "</td>";
+        }
+        draw += "</tr>";
+      }
+      draw += "</table>";
+      document.write(draw);
+
+      // Dùng while do
+      document.write("<h1>Dùng while do</h1>");
+      let wr =
+        "<table  border='1' width='300' cellspacing ='0' cellpadding = '3'>";
+      let x = 1;
+      let y = 1;
+      while (x <= 10) {
+        wr += "<tr>";
+        while (y <= 10) {
+          wr += "<td>" + x * y + "</td>";
+          y++;
+        }
+        x++;
+        y = 1;
+        wr += "</td>";
+      }
+      wr += "</table>";
+      document.write(wr);
+    </script>
+  </body>
+</html>
