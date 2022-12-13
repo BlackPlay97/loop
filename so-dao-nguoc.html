@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Số đảo ngược</title>
+  </head>
+  <body>
+    <p>Nhập vào một dãy số nguyên dương:</p>
+    <input type="text" id="inpNum" size="30" />
+    <button onclick="run()">OK</button> <button>Cancel</button>
+    <div id="result"></div>
+    <button style="margin-top: 20px">OK</button>
+    <script>
+      function run() {
+        let strNum = document.getElementById("inpNum").value;
+        let phanDu = 0;
+        let phanNguyen;
+        let result = "";
+        phanNguyen = parseInt(strNum);
+        while (phanNguyen > 1) {
+          phanDu = phanNguyen % 10;
+          result += Math.floor(phanDu);
+          phanNguyen = phanNguyen / 10;
+        }
+        document.getElementById("result").innerHTML =
+          "Số đảo ngược là: " + result;
+      }
+    </script>
+  </body>
+</html>
