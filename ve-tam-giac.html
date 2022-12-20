@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vẽ tam giác</title>
+  </head>
+  <body>
+    <script>
+      let drawCol = "";
+      for (i = 0; i < 5; i++) {
+        for (j = 0; j <= i; j++) {
+          drawCol += "*";
+        }
+        drawCol += "<br/>";
+      }
+
+      document.write(drawCol);
+      ///////////////////////////////////////////////////////////////////////////////////////////////
+      document.write("<br/>");
+      let drawColReverse = "";
+      for (i = 0; i < 5; i++) {
+        for (j = i; j < 5; j++) {
+          drawColReverse += "*";
+        }
+        drawColReverse += "<br/>";
+      }
+      document.write(drawColReverse);
+      ///////////////////////////////////////////////////////////////////////////////////////////////
+      document.write("<br/>");
+      let drawRow = "";
+      for (i = 0; i < 5; i++) {
+        for (j = i; j < 4; j++) {
+          drawRow += "&nbsp;&nbsp;";
+        }
+        for (o = j; o < 5; o++) {
+          for (u = 0; u <= i; u++) {
+            drawRow += "*";
+          }
+        }
+        drawRow += "<br/>";
+      }
+      document.write(drawRow);
+      ///////////////////////////////////////////////////////////////////////////////////////////////
+      document.write("<br/>");
+      let drawRowReverse = "";
+      for (i = 0; i < 5; i++) {
+        for (j = 0; j < i; j++) {
+          drawRowReverse += "&nbsp;&nbsp;";
+        }
+        for (o = j; o < 5; o++) {
+          drawRowReverse += "*";
+        }
+        drawRowReverse += "<br/>";
+      }
+      document.write(drawRowReverse);
+    </script>
+  </body>
+</html>
